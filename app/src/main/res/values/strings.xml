@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">Design</string>
+    <string name="tv_first">Заболею</string>
+    <string name="tv_second">или</string>
+    <string name="tv_third">Не заболею?</string>
+    <string name="yes">Да</string>
+    <string name="no">Нет</string>
+    <string name="page_number">%1$d/%2$d</string>
+    <string name="zero">0</string>
+    <string name="one_five">1-5</string>
+    <string name="five_ten">5-10</string>
+    <string name="ten_fifteen">10-15</string>
+
+    <string name="question_one">У вас есть проблемы\n с иммунитетом?</string>
+    <string name="question_two">У вас есть\n хронические\n заболевания?</string>
+    <string name="question_three">С каким количеством\n людей в день вы\n контактируете\n оффлайн?</string>
+    <string name="question_four">Контактируют ли эти\n люди с другими\n людьми?</string>
+    <string name="question_five">Используете ли вы\n средства защиты при\n выходе из дома?</string>
+    <string name="question_six">Соблюдаете ли вы\n карантин?</string>
+
+    <string name="title_dark_green">ТАК ДЕРЖАТЬ!</string>
+    <string name="title_green">ВЫ МОЖЕТЕ ЛУЧШЕ!</string>
+    <string name="title_yellow">ХОДИТЕ ПО КРАЮ!</string>
+    <string name="title_orange">ВИРУС ГДЕ-ТО РЯДОМ!</string>
+    <string name="title_red">СРОЧНЫЙ КАРАНТИН!</string>
+
+    <string name="small_desc_dark_green">Ваш риск заболеть составляет\nот 0% до 10%</string>
+    <string name="small_desc_green">Ваш риск заболеть составляет\nот 10% до 30%</string>
+    <string name="small_desc_yellow">Ваш риск заболеть составляет\nот 30% до 50%</string>
+    <string name="small_desc_orange">Ваш риск заболеть составляет\nот 50% до 70%</string>
+    <string name="small_desc_red">Ваш риск заболеть составляет\nот 70% до 100%</string>
+
+    <string name="big_desc_dark_green">Похоже, вы серьезно\n отнеслись к ситуации и\n соблюдаете основные меры\n предосторожности.\n Продолжайте в том же духе\n и скоро все закончиться!\n</string>
+    <string name="big_desc_green">Видно, что вы приняли во\n внимание опасность\n ситуации. Но, все же\n недостаточно для того,\n чтобы быть в безопасности.\n Постарайтесь уделить\n внимание своему\n иммунитету и максимально\n ограничить физические\n контакты с внешним миром.\n</string>
+    <string name="big_desc_yellow">Похоже, вы слышали про\n коронавирус, но вас это\n не напугало.\n Настоятельно просим\n вас соблюдать базовые\n меры безопасности:\n позаботиться о своем\n иммунитете и\n минимизировать все\n физические контакты с\n внешним миром.\nОдин неудачный день и\n вы станете носителем\n вируса, поставив себя и\n семью под удар.\n</string>
+    <string name="big_desc_orange">Похоже, вы не очень верите в\n коронавирус. Или хотите чтобы\n карантин длился как можно\n дольше.\n Однако, заверяем, что ситуация\n очень серьезная и активно\n призываем вас начать\n соблюдать базовые\n рекомендации. Пожалуйста,\n обратите внимание на свой\n иммунитет и минимизируйте\n все физические контакты с\n миром. Это сложно, но только\n это может помочь преодолеть\n ситуацию.\n Один неудачный день и вы\n станете носителем вируса,\n поставив себя и семью под удар.\n</string>
+    <string name="big_desc_red">Похоже, о коронавирусе вы\n впервые услышали на этом\n курсе. Как и о необходимых\n мерах безопасности.\n У вас высокая вероятность\n заразиться этим вирусом,\n если вы еще не заражены.\n Пожалуйста, минимизируйте\n все физические контакты с\n внешним миром в самое\n ближайшее время.\n</string>
+
+    <string name="big_desc_dark_green_colored"></string>
+    <string name="big_desc_green_colored">ограничить физические\n контакты</string>
+    <string name="big_desc_yellow_colored">соблюдать базовые\n меры безопасности</string>
+    <string name="big_desc_orange_colored">призываем вас начать\n соблюдать базовые\n рекомендации</string>
+    <string name="big_desc_red_colored">минимизируйте\n все физические контакты</string>
+
+</resources>
