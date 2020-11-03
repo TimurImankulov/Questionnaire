@@ -2,13 +2,19 @@ package com.example.design.ui.question
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
 import com.example.design.R
 import com.example.design.ui.answer.AnswerActivity
+import com.example.design.ui.question.viewpager.PagerAdapter
+import com.example.design.ui.question.viewpager.PagerListener
 import com.example.design.utils.PagerDecorator
 import kotlinx.android.synthetic.main.activity_questions.*
 
 class QuestionsActivity : AppCompatActivity(), PagerListener {
+
+    private val viewModel: QuestionsViewModel by viewModels()
 
     private val adapter by lazy {
         PagerAdapter(this)
@@ -20,6 +26,19 @@ class QuestionsActivity : AppCompatActivity(), PagerListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_questions)
         setupViewPager()
+        setupViewModel()
+    }
+
+    private fun setupViewModel() {
+        viewModel.calculateResult.observe(this, Observer {
+            questionResult = it
+        })
+        viewModel.actionToResult.observe(this, Observer {
+            val intent = Intent(this, AnswerActivity::class.java)
+            intent.putExtra(POINTS, it)
+            startActivity(intent)
+            finish()
+        })
     }
 
 //    override fun onBackPressed() {
@@ -53,26 +72,17 @@ class QuestionsActivity : AppCompatActivity(), PagerListener {
     }
 
     override fun selectAnswer(answer: Boolean, position: Int) {  // клик для 2 кнопок
-        if (position<4 && answer) questionResult += 12
-        if (position>=4 && !answer) questionResult += 12
-
-        nextPage(position)
+        viewModel.calculatePoints(answer, position, adapter.itemCount)
+         nextPage()
     }
 
     override fun selectAnswerFourQuestions(points: Int, position: Int) { // клик для 4 кнопок
-        questionResult += points
-        nextPage(position)
+        viewModel.calculatePointsFourButton(points, position, adapter.itemCount)
+        nextPage()
     }
 
-    private fun nextPage(position: Int) {
+    private fun nextPage() {
         pager.currentItem += 1
-
-        if (position + 1 == adapter.itemCount) {
-            val intent = Intent(this, AnswerActivity::class.java)
-            intent.putExtra(POINTS, questionResult)
-            startActivity(intent)
-            finish()
-        }
     }
 
     companion object {

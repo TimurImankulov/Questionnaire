@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.design.ui.question.QuestionsActivity
 import com.example.design.R
+import com.example.design.utils.safeOnClickListener
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -15,7 +16,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupListeners() {
-        btnStart.setOnClickListener {
+        btnStart.safeOnClickListener {
             startActivity(Intent(this, QuestionsActivity::class.java))
         }
     }

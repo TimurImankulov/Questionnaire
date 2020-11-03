@@ -66,10 +66,10 @@ enum class AnswerEnum(                      //класс для заполнен
     companion object {
         fun selectTypeOfEnum(points: Int): AnswerEnum {    // в этот методе в зависимоти от баллов используем ресурсы
             return when {
-                points < 12 -> DARK_GREEN
-                points in  12..21-> GREEN
-                points in 22..36 -> YELLOW
-                points in 37..50 -> ORANGE
+                points <= 12 -> DARK_GREEN
+                points in  13..24-> GREEN
+                points in 25..36 -> YELLOW
+                points in 37..48 -> ORANGE
                 else -> RED
             }
         }

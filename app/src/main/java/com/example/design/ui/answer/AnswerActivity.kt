@@ -8,6 +8,7 @@ import com.example.design.R
 import com.example.design.ui.question.QuestionsActivity.Companion.POINTS
 import com.example.design.utils.AnswerEnum
 import com.example.design.utils.ClickSpan
+import com.example.design.utils.safeOnClickListener
 import kotlinx.android.synthetic.main.activity_answer.*
 
 class AnswerActivity : AppCompatActivity() {
@@ -42,7 +43,7 @@ class AnswerActivity : AppCompatActivity() {
     }
 
     private fun setupListener() {
-        btnRefresh.setOnClickListener {
+        btnRefresh.safeOnClickListener {
             finish()
         }
     }

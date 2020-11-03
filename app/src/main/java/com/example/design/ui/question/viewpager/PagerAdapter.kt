@@ -1,4 +1,4 @@
-package com.example.design.ui.question
+package com.example.design.ui.question.viewpager
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

@@ -1,8 +1,9 @@
-package com.example.design.ui.question
+package com.example.design.ui.question.viewpager
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 import com.example.design.R
+import com.example.design.utils.safeOnClickListener
 import kotlinx.android.synthetic.main.item_questions.view.tvPageNumber
 import kotlinx.android.synthetic.main.item_questions.view.tvQuestion
 import kotlinx.android.synthetic.main.item_questions_four_buttons.view.*
@@ -18,16 +19,16 @@ class PagerFourViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         itemView.tvPageNumber.text =
             itemView.context.resources.getString(R.string.page_number, (position + 1), size)
 
-        itemView.btnOne.setOnClickListener {
+        itemView.btnOne.safeOnClickListener {
             listener.selectAnswerFourQuestions(0, position)
         }
-        itemView.btnTwo.setOnClickListener {
+        itemView.btnTwo.safeOnClickListener {
             listener.selectAnswerFourQuestions(4, position)
         }
-        itemView.btnThree.setOnClickListener {
+        itemView.btnThree.safeOnClickListener {
             listener.selectAnswerFourQuestions(8, position)
         }
-        itemView.btnFour.setOnClickListener {
+        itemView.btnFour.safeOnClickListener {
             listener.selectAnswerFourQuestions(12, position)
         }
     }
